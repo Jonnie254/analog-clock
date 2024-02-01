@@ -47,7 +47,7 @@ body{
     display:flex;
     justify-content:center;
     align-items: center;
-    animation: colorful 30s ;
+    animation: colorful 45s infinite;
 }
 @keyframes colorful{
     100%{
@@ -176,7 +176,5 @@ body{
 @keyframes blink {
     50%{
         opacity:0;
-
-    }
-    
+ } 
 }
