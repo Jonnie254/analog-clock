@@ -24,3 +24,22 @@ for(let i=1; i<=60; i++){
     );
 }
 barSeconds.insertAdjacentHTML("afterbegin", barElement.join(""));
+const handHours = document.querySelector('.hand.hours');
+const handMinutes = document.querySelector('.hand.minutes');
+const handSeconds = document.querySelector('.hand.seconds');
+function getCurrentTime(){
+    let date = new Date();
+    let currentHours = date.getHours();
+    let currentMinutes = date.getMinutes();
+    let currentSeconds = date.getSeconds();
+
+    handHours.style.transform=`rotate(${currentHours * 30 + currentMinutes/2 }deg)`;
+    handMinutes.style.transform=`rotate(${currentMinutes * 6 }deg)`;
+    handSeconds.style.transform=`rotate(${currentSeconds * 6 }deg)`;
+}
+//call function getCurrentTime on page load
+getCurrentTime(getCurrentTime, 1000);
+
+//call function getCurrentTime to set clock hands every second
+//1000ms = 1s
+setInterval(getCurrentTime, 1000);
