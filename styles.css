@@ -20,21 +20,22 @@ body{
     margin-bottom: 20px; /* Adjust the margin as needed */
     margin-bottom: 10rem;
     font-size: 2.0em;
-    color:#0ef;
+    color:#1ef;
 }
 .container p span{
-    color:red;
+    color:#ADD8E6;
     position: relative;
 }
 .container p span::before{
     content:"";
     right:-8px;
     top:50%;
-    background: red;
+    background: #ADD8E6;
     position: absolute;
     height:30px;
     width:2px;
     transform: translateY(-50%);
+    animation: blink 0.7s infinite;
 }
 
 /*styling the clock wrapper*/
@@ -170,4 +171,12 @@ body{
     height:calc(240px + 70px);
     background: green;
     box-shadow: none;
+}
+
+@keyframes blink {
+    50%{
+        opacity:0;
+
+    }
+    
 }
