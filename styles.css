@@ -22,11 +22,33 @@ body{
     justify-content:center;
     align-items: center;
 }
+.bar-seconds,
 .number-hours{
     position:absolute;
     width:100%;
     height:100%;
     border-radius: 50%;
+}
+.bar-seconds span p {
+    display:inline-block;
+    width:2px;
+    height:12px;
+    background:#0ef;
+}
+.bar-seconds span:nth-child(5n) p {
+    background: red;
+    width:6px;
+    height:18px;
+    transition: translateY(8px);
+    border-radius: 2px;
+    box-shadow: 0 0 10px red;
+}
+.bar-seconds span{
+    position:absolute;
+    /*360 / 60 = 6deg*/
+    transform:rotate(calc(var(--index) * 6deg));
+    inset:-20px;
+    text-align: center;
 }
 .number-hours span{
     position:absolute;
@@ -50,40 +72,73 @@ body{
 .hands-box .hand{
     position:absolute;
     border-radius:50%;
-   
-
-}
-.hands-box .hours{
-    width:320px;
-    height:320px;
-    border:2px solid red;  
+    display:flex;
+    justify-content:center;
 }
 .hands-box .hand i{
     display: inline-block;
+    transform-origin: bottom;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #0ef ;
+    
 }
+.hands-box .hours{
+    width:320px;
+    height:320px; 
+    transform: rotate(40deg);
+}
+
 .hands-box .hours i{
     width:8px;
     /*half of parent height*/
     height:160px;
-    background:red;
+    background:#0ef;
+    
 }
 .hands-box .minutes{
     width:450px;
     height:450px;
-    border: 2px solid yellow;
+    transform: rotate(230deg);
+}
+/*center dot bottom*/
+.hands-box .minutes::before{
+    content:'';
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:25px;
+    height:25px;
+    background:#0ef;
+    border-radius: 50%;
+    box-shadow:0 0 5px #0ef;
 }
 .hands-box .minutes i{
     width:8px;
     height:225px;
-    background: yellow;
+    background: #0ef;
+    
 }
 .hands-box .seconds{
     width:480px;
     height:480px;
-    border:2px solid green;
+    transform:rotate(160deg);
 }
+/*center dot top*/
+.hands-box .seconds::before{
+    content:'';
+    position:absolute;
+    top:50%;
+    transform: translateY(-50%);
+    width:20PX;
+    height:20px;
+    background:#fff;
+    border-radius: 50%;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .5);
+}
+
 .hands-box .seconds i{
-    width:8px;
-    height:240px;
+    width:4px;
+    height:calc(240px + 70px);
     background: green;
+    box-shadow: none;
 }
