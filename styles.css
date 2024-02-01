@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&display=swap');
 *{
     margin:0;
     padding:0;
@@ -18,8 +19,7 @@ body{
 .container {
     text-align: center;
     color: #fff; /* Adjust the color as needed */
-    margin-bottom: 20px; /* Adjust the margin as needed */
-    margin-bottom: 10rem;
+    
     font-size: 2.0em;
     color:#1ef;
 }
@@ -40,9 +40,21 @@ body{
 }
 
 /*styling the digital clock*/
+.digital-clock{
+    background: #131419;
+    margin-top: 12px;
+    height:120px;
+    width:600px;
+    line-height: 120px;
+    text-align: center;
+    padding: 0 5px;
+    box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.05);
+}
 .digital-clock .display {
     font-size: 60px;
-    
+    color:cyan;
+    letter-spacing:5px;
+    font-family: "Orbitron", sans-serif; 
 }
 
 /*styling the clock wrapper*/
