@@ -10,8 +10,33 @@ body{
     min-height:100vh;
     background-color: #081b29;
     overflow:hidden;
+    flex-direction: column;
 
 }
+/* Styling the container as a header */
+.container {
+    text-align: center;
+    color: #fff; /* Adjust the color as needed */
+    margin-bottom: 20px; /* Adjust the margin as needed */
+    margin-bottom: 10rem;
+    font-size: 2.0em;
+    color:#0ef;
+}
+.container p span{
+    color:red;
+    position: relative;
+}
+.container p span::before{
+    content:"";
+    right:-8px;
+    top:50%;
+    background: red;
+    position: absolute;
+    height:30px;
+    width:2px;
+    transform: translateY(-50%);
+}
+
 /*styling the clock wrapper*/
 .wrapper{
     position:relative;
@@ -21,7 +46,7 @@ body{
     display:flex;
     justify-content:center;
     align-items: center;
-    animation: colorful 30s linear infinite;
+    animation: colorful 30s ;
 }
 @keyframes colorful{
     100%{
