@@ -11,6 +11,7 @@ body{
     background-color: #081b29;
     overflow:hidden;
     flex-direction: column;
+    gap:70px;
 
 }
 /* Styling the container as a header */
@@ -36,6 +37,12 @@ body{
     width:2px;
     transform: translateY(-50%);
     animation: blink 0.7s infinite;
+}
+
+/*styling the digital clock*/
+.digital-clock .display {
+    font-size: 60px;
+    
 }
 
 /*styling the clock wrapper*/
