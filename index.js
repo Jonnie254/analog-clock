@@ -1,3 +1,7 @@
+/**
+ * Represents the element with the class 'number-hours'.
+ * @type {HTMLElement}
+ */
 const numberHours=document.querySelector('.number-hours');
 const numberElement=[];
  

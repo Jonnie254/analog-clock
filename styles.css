@@ -8,19 +8,24 @@ body{
     justify-content:center;
     align-items:center;
     min-height:100vh;
+    background-color: #081b29;
+    overflow:hidden;
 
 }
+/*styling the clock wrapper*/
 .wrapper{
     position:relative;
     width:500px;
     height:500px;
     border-radius: 50%;
+    display:flex;
+    justify-content:center;
+    align-items: center;
 }
 .number-hours{
     position:absolute;
     width:100%;
     height:100%;
-    background: purple;
     border-radius: 50%;
 }
 .number-hours span{
@@ -31,6 +36,54 @@ body{
 }
 .number-hours span p{
     font-size: 52px;
-    transform: rotate(calc(var(--index)* -30deg));
-    
+    color: #0ef;
+    text-shadow: 0 0 10px #0ef;
+    transform: rotate(calc(var(--index)* -30deg));  
+}
+/*styling the clock hands*/
+.hands-box{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+.hands-box .hand{
+    position:absolute;
+    border-radius:50%;
+   
+
+}
+.hands-box .hours{
+    width:320px;
+    height:320px;
+    border:2px solid red;  
+}
+.hands-box .hand i{
+    display: inline-block;
+}
+.hands-box .hours i{
+    width:8px;
+    /*half of parent height*/
+    height:160px;
+    background:red;
+}
+.hands-box .minutes{
+    width:450px;
+    height:450px;
+    border: 2px solid yellow;
+}
+.hands-box .minutes i{
+    width:8px;
+    height:225px;
+    background: yellow;
+}
+.hands-box .seconds{
+    width:480px;
+    height:480px;
+    border:2px solid green;
+}
+.hands-box .seconds i{
+    width:8px;
+    height:240px;
+    background: green;
 }
