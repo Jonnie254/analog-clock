@@ -23,3 +23,14 @@ body{
     background: purple;
     border-radius: 50%;
 }
+.number-hours span{
+    position:absolute;
+    transform: rotate(calc(var(--index)*30deg));
+    inset:6px;
+    text-align: center;
+}
+.number-hours span p{
+    font-size: 52px;
+    transform: rotate(calc(var(--index)* -30deg));
+    
+}
